@@ -1,0 +1,212 @@
+@import url(https://fonts.google.com/specimen/Red+Hat+Display);
+
+:root{
+    --color-pale-blue: hsl(225, 100%, 94%);
+    --color-bright-blue: hsl(245, 75%, 52%);
+
+    --color-very-pale-blue: hsl(225, 100%, 98%);
+    --color-desaturated-blue: hsl(224, 23%, 55%);
+    --color-dark-blue: hsl(223, 47%, 23%);
+
+    --fontFamily-main: 'Red Hat Display', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(images/pattern-background-mobile.svg), var(--color-pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: var(--fontFamily-main);
+}
+
+.card{
+    background: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 15px 15px 0, hsla(245, 75%, 52%, .11);
+    overflow: hidden;
+    max-width: 27.5rem;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.cardImageHolder img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.cardBody{
+    text-align: center;
+}
+
+.title{
+    color: var(--color-dark-blue);
+    font-size: 1.4rem;
+    font-weight: 900;
+    padding: 1.3em 0 .8em 0;
+}
+
+.text{
+    color: var(--color-desaturated-blue);
+    line-height: 1.6;
+    font-size: .95rem;
+    padding: 0 2.1em 1.4em 2.1em;
+
+}
+
+.planBox{
+    background: var(--color-very-pale-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5em 1.53m 1.5em;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.planBoxLeft{
+    display: flex;
+}
+
+.planDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 1.2em;
+    gap: .2em;
+    text-align: left;
+    font-size: .7rem;
+}
+
+.planDetails h2{
+    color: var(--color-dark-blue);
+    font-size: .9rem;
+}
+
+.planDetails p{
+    color: var(--color-desaturated-blue);
+    font-size: .8rem;
+}
+
+.planBoxRight a{
+    color: var(--color-bright-blue);
+    font-weight: 700;
+    font-size: .8rem;
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+.planBoxRight a:hover{
+    opacity: .8;
+}
+
+.planBoxRight a:focus{
+    outline: 3px dotted var(--color-desaturated-blue);
+}
+
+.planBoxRight a:focus:not(:focus-visible){
+    outline: none;
+}
+
+.planBoxRight a:focus-visible{
+    outline: 3px dotted var(--color-desaturated-blue);
+}
+
+.buttonHolder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: .65em;
+    margin-bottom: 1.5em;
+}
+
+.btn{
+    all: unset;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: .95rem;
+    font-weight: 700;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    padding: 1em;
+}
+
+.btn:focus{
+    outline: 3px dashed var(--color-desaturated-blue);
+}
+
+.btn:focus:not(:focus-visible){
+    outline: none;
+}
+
+.btn:focus-visible{
+    outline: 3px dashed var(--color-desaturated-blue);
+}
+
+.payment-btn{
+    background: var(--color-bright-blue);
+    color: whitesmoke;
+    box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, .35);
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+.payment-btn:hover{
+    opacity: .8;
+}
+
+.cancel-btn{
+    color: var(--color-dark-blue);
+}
+
+@media (min-width: 450px){
+    .body{
+        background: url(images/pattern-background-desktop.svg), var(--color-pale-blue);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .title{
+        font-size: 1.7rem;
+        padding-top: 1.7em;
+        padding-bottom: .7em;
+    }
+
+    .text{
+        font-size: 1rem;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .planBox{
+        margin: 0 3em 2em 3em;
+        padding: 1.5em;
+    }
+
+    .planDetails h2{
+        font-size: 1rem;
+    }
+
+    .planDetails p{
+        font-size: 1rem;
+    }
+
+    .planBoxRight a{
+        font-size: .9rem;
+    }
+
+    .btn{
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+}
